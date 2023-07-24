@@ -13,8 +13,11 @@ export class AppComponent implements OnInit {
   englishWelcomeMessage?: string;
   frenchWelcomeMessage?: string;
 
+
   constructor(private httpClient: HttpClient, private welcomeService: WelcomeService) {}
 
+  private usdToCadRate: number = 1.25; // Replace with the actual exchange rate
+  private usdToEurRate: number = 0.85; // Replace with the actual exchange rate
   private baseURL: string = 'http://localhost:8080';
   private getUrl: string = this.baseURL + '/room/reservation/v1/';
   private postUrl: string = this.baseURL + '/room/reservation/v1';
@@ -88,6 +91,17 @@ export class AppComponent implements OnInit {
         console.error('Error fetching French welcome message:', error);
       }
     );
+  }
+  // Function to convert USD to CAD
+  convertToCAD(price: string): number {
+    const priceUSD = parseFloat(price);
+    return priceUSD * this.usdToCadRate;
+  }
+
+  // Function to convert USD to EUR
+  convertToEUR(price: string): number {
+    const priceUSD = parseFloat(price);
+    return priceUSD * this.usdToEurRate;
   }
 }
 
