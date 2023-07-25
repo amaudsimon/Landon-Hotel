@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { WelcomeService } from "./welcome.service";
+import {TimeService} from "./time.service";
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,13 @@ import { WelcomeService } from "./welcome.service";
 export class AppComponent implements OnInit {
   englishWelcomeMessage?: string;
   frenchWelcomeMessage?: string;
+  convertedTimes: any; // Change the type to 'any' or a custom interface to match the expected data
 
 
-  constructor(private httpClient: HttpClient, private welcomeService: WelcomeService) {}
+
+
+
+  constructor(private httpClient: HttpClient, private welcomeService: WelcomeService, private timeService:TimeService) {}
 
   private usdToCadRate: number = 1.25; // Replace with the actual exchange rate
   private usdToEurRate: number = 0.85; // Replace with the actual exchange rate
@@ -29,9 +34,11 @@ export class AppComponent implements OnInit {
   currentCheckOutVal!: string;
 
   ngOnInit() {
+    this.getTimeConversions();
     this.roomsearch = new FormGroup({
       checkin: new FormControl(''),
       checkout: new FormControl('')
+
     });
 
     this.getWelcomeMessages();
@@ -92,13 +99,25 @@ export class AppComponent implements OnInit {
       }
     );
   }
-  // Function to convert USD to CAD
+
+  getTimeConversions() {
+    this.timeService.getTimeConversion().subscribe(
+      (response) => {
+        this.convertedTimes = response;
+        console.log(response);
+      },
+      (error) => {
+        console.error('Error fetching time conversions:', error);
+      }
+    );
+  }
+
+
   convertToCAD(price: string): number {
     const priceUSD = parseFloat(price);
     return priceUSD * this.usdToCadRate;
   }
 
-  // Function to convert USD to EUR
   convertToEUR(price: string): number {
     const priceUSD = parseFloat(price);
     return priceUSD * this.usdToEurRate;

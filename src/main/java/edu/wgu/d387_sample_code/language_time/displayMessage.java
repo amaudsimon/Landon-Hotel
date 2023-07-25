@@ -1,4 +1,4 @@
-package edu.wgu.d387_sample_code.language_currency;
+package edu.wgu.d387_sample_code.language_time;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

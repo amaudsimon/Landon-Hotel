@@ -1,13 +1,14 @@
 package edu.wgu.d387_sample_code;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import edu.wgu.d387_sample_code.language_currency.displayMessage;
-import edu.wgu.d387_sample_code.controller.MessagesController;
+import edu.wgu.d387_sample_code.language_time.displayMessage;
 
 
 @SpringBootApplication
@@ -34,7 +35,10 @@ public class D387SampleCodeApplication {
 		// Start the threads
 		englishThread.start();
 		frenchThread.start();
+
+
 	}
+
 }
 
 

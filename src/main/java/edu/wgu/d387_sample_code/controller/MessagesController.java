@@ -1,6 +1,6 @@
 package edu.wgu.d387_sample_code.controller;
 
-import edu.wgu.d387_sample_code.language_currency.displayMessage;
+import edu.wgu.d387_sample_code.language_time.displayMessage;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Locale;
