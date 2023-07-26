@@ -1,0 +1,78 @@
+commit aee7cb686357eb120b4ed16af10cfbc0dd902d28
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Wed Jul 26 11:14:58 2023 -0500
+
+    B.   Create a README file that includes the following:
+    
+    1.   Include notes describing where in the code to find the changes you made for each requirement in parts C1, C2, C3, D2, and D3. Each note should include the label for the task requirement (e.g., C1, C2), file name, line number, and change.
+    
+    2.   Include the URL to the GitLab repository.
+
+commit b74bab8fc6334f8bbe2f13835f0bac1934ffa5a7
+Merge: e2fd918 0913c2d
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Tue Jul 25 16:41:40 2023 -0500
+
+    Merge remote-tracking branch 'origin/working' into working
+
+commit e2fd918a0fa0ac77722a8a1243f8c5a3988424d9
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Tue Jul 25 16:07:12 2023 -0500
+
+    Test the Dockerfile by doing the following:
+    
+    •   Create a Docker image of the current multithreaded Spring application.
+    
+    •   Run the Docker image in a container and give the container a name that includes D387_[student ID].
+    
+    •   Submit a screenshot capture of the running application with evidence it is running in the container.
+
+commit 0913c2dcc1a575af312be6272bfae06822981f31
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Tue Jul 25 16:07:12 2023 -0500
+
+    Build the Dockerfile to create a single image that includes all code, including modifications made in parts C1 to C3.
+
+commit 61ac4a94b98c871c69e7c704993652abc4eda4b0
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Tue Jul 25 01:07:20 2023 -0500
+
+    Display the time for an online live presentation held at the Landon Hotel by doing the following:
+    
+    a.   Write a Java method to convert times between eastern time (ET), mountain time (MT), and coordinated universal time (UTC) zones.
+    
+    b.   Use the time zone conversion method from part C3a to display a message stating the time in all three times zones in hours and minutes for an online, live presentation held at the Landon Hotel. The times should be displayed as ET, MT, and UTC.
+
+commit b4ae4481d2b154559ba2b6f1147f8223014b7e3f
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Mon Jul 24 15:26:22 2023 -0500
+
+    Modify the front end to display the price for a reservation in currency rates for U.S. dollars ($), Canadian dollars (C$), and euros (€) on different lines.
+
+commit 11e2f1d6865235f7aa2fceb5fce9b6186bedd6ea
+Author: amaudsimon <asimo29@my.wgu.edu>
+Date:   Mon Jul 24 14:43:01 2023 -0500
+
+    .   Install the Landon Hotel scheduling application in your integrated development environment (IDE). Modify the Java classes of application to display a welcome message by doing the following:
+    
+    a.   Build resource bundles for both English and French (languages required by Canadian law). Include a welcome message in the language resource bundles.
+    
+    b.   Display the welcome message in both English and French by applying the resource bundles using a different thread for each language.
+
+commit 1b60ca3cd9c7a97dd347faf32cd9963e6c0e3f43
+Author: Zohar Sajith <zohar.sajith@cdw.com>
+Date:   Mon Feb 27 18:17:49 2023 +0000
+
+    Added Branching instructions to README
+
+commit 52e94018ac6f0eab2883de377a36d3d794c0d3c2
+Author: matt.alexander <matt.alexander@wgu.edu>
+Date:   Thu Feb 16 16:35:51 2023 -0500
+
+    Upload base project
+
+commit 6d77cc7bb3456f4804de2c3e13c9c2098e9afcdb
+Author: Emilio Miller <emilio.miller@siriusfederal.com>
+Date:   Thu Feb 16 21:20:20 2023 +0000
+
+    Upload ReadMe
